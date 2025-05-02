@@ -1,0 +1,245 @@
+/* Responsive styles */
+
+/* Base responsive adjustments */
+@media (max-width: 1200px) {
+  :root {
+    --container-max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --container-max-width: 720px;
+  }
+  
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  /* Adjust section padding */
+  section {
+    padding: var(--space-7) 0;
+  }
+  
+  /* Projects and blog grid */
+  .projects-grid, .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-max-width: 540px;
+    --container-padding: 1rem;
+  }
+  
+  h1 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-4);
+  }
+  
+  /* Navigation */
+  .hamburger {
+    display: flex;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    position: fixed;
+    flex-direction: column;
+    background-color: var(--color-secondary-dark);
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    padding: 80px var(--space-5) var(--space-5);
+    transition: right var(--transition-normal);
+    z-index: 999;
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  /* Hero section */
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: var(--space-6);
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
+  
+  /* About section */
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  /* Education and achievements */
+  .education-item, .achievement-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .education-item .icon, .achievement-icon {
+    margin-bottom: var(--space-2);
+  }
+  
+  /* Skills */
+  .skill-card {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Experience */
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-dot {
+    left: 11px;
+  }
+  
+  /* Projects and blog grid */
+  .projects-grid, .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Services */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Contact */
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: var(--space-3);
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Timeline */
+  .timeline-item {
+    padding-left: 40px;
+  }
+  
+  /* Testimonials */
+  .testimonial {
+    padding: var(--space-3);
+  }
+  
+  .quote {
+    font-size: var(--font-size-base);
+  }
+  
+  /* Form elements */
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg-dark: #f5f5f5;
+    --color-bg-darker: #e0e0e0;
+    --color-secondary-light: #ffffff;
+    --color-secondary-dark: #f0f0f0;
+    --color-text-light: #333333;
+    --color-text-muted: #666666;
+  }
+  
+  h2 {
+    color: var(--color-primary-dark);
+  }
+  
+  .education-item, .timeline-content, .project-card, 
+  .achievement-card, .service-card, .testimonial, .blog-card {
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .social-links a {
+    background-color: var(--color-secondary-dark);
+    color: var(--color-text-dark);
+  }
+  
+  .btn-secondary {
+    border-color: var(--color-text-dark);
+    color: var(--color-text-dark);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--color-text-dark);
+    color: var(--color-text-light);
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  header, footer, .back-to-top, #testimonials, #contact {
+    display: none;
+  }
+  
+  section {
+    page-break-inside: avoid;
+    padding: 1cm 0;
+  }
+  
+  a {
+    text-decoration: underline;
+    color: black;
+  }
+  
+  .project-card, .skill-card, .blog-card, 
+  .service-card, .education-item, .achievement-card {
+    break-inside: avoid;
+    border: 1px solid #ddd;
+  }
+}
+
+/* Support for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

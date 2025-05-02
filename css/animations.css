@@ -1,0 +1,224 @@
+/* Animations */
+@keyframes scrollDown {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  75% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply animations */
+.hero-image {
+  animation: float 6s ease-in-out infinite;
+}
+
+.education-image, .experience-image, .contact-image {
+  animation: pulse 6s ease-in-out infinite;
+}
+
+/* AOS (Animate On Scroll) data attributes styles */
+[data-aos="fade-in"] {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+[data-aos="fade-in"].aos-animate {
+  opacity: 1;
+}
+
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-aos="fade-right"] {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-aos="fade-right"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-aos="fade-left"] {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-aos="fade-left"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Delay animations */
+[data-aos][data-aos-delay="50"].aos-animate {
+  transition-delay: 50ms;
+}
+
+[data-aos][data-aos-delay="100"].aos-animate {
+  transition-delay: 100ms;
+}
+
+[data-aos][data-aos-delay="150"].aos-animate {
+  transition-delay: 150ms;
+}
+
+[data-aos][data-aos-delay="200"].aos-animate {
+  transition-delay: 200ms;
+}
+
+[data-aos][data-aos-delay="250"].aos-animate {
+  transition-delay: 250ms;
+}
+
+[data-aos][data-aos-delay="300"].aos-animate {
+  transition-delay: 300ms;
+}
+
+/* Animated buttons */
+.btn {
+  overflow: hidden;
+  position: relative;
+}
+
+.btn:after {
+  content: "";
+  background: rgba(255, 255, 255, 0.2);
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.5s, height 0.5s, opacity 0.5s;
+}
+
+.btn:active:after {
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+  transition: 0s;
+}
+
+/* Hamburger menu animation */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Hover animations */
+.skill-card i {
+  transition: transform var(--transition-normal);
+}
+
+.skill-card:hover i {
+  transform: scale(1.2);
+}
+
+.service-card i {
+  transition: transform var(--transition-normal);
+}
+
+.service-card:hover i {
+  transform: rotate(10deg);
+}
+
+.social-links a i {
+  transition: transform var(--transition-normal);
+}
+
+.social-links a:hover i {
+  transform: scale(1.2);
+}

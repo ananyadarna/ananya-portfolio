@@ -1,0 +1,97 @@
+:root {
+  /* Color System */
+  --color-primary: #DDB9E5;
+  --color-primary-light: #ef64e8;
+  --color-primary-dark: #9B7093;
+  
+  --color-secondary: #1E1E1E;
+  --color-secondary-light: #2A2A2A;
+  --color-secondary-dark: #121212;
+  
+  --color-accent: #4A90E2;
+  --color-accent-light: #6BA5E7;
+  --color-accent-dark: #3A7BC8;
+  
+  --color-success: #2ECC71;
+  --color-success-light: #4CD787;
+  --color-success-dark: #25A25A;
+  
+  --color-warning: #F39C12;
+  --color-warning-light: #F5B041;
+  --color-warning-dark: #D68910;
+  
+  --color-error: #E74C3C;
+  --color-error-light: #EC7063;
+  --color-error-dark: #C0392B;
+  
+  --color-text-light: #FFFFFF;
+  --color-text-muted: #B3B3B3;
+  --color-text-dark: #333333;
+
+  --color-bg-light: #FFFFFF;
+  --color-bg-dark: #1E1E1E;
+  --color-bg-darker: #121212;
+  
+  /* Typography */
+  --font-family-primary: 'Inter', sans-serif;
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
+  --line-height-tight: 1.2;
+  --line-height-base: 1.5;
+  --line-height-loose: 1.7;
+  
+  /* Spacing (8px system) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 1rem;     /* 16px */
+  --space-4: 1.5rem;   /* 24px */
+  --space-5: 2rem;     /* 32px */
+  --space-6: 2.5rem;   /* 40px */
+  --space-7: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+  --space-9: 5rem;     /* 80px */
+  --space-10: 6rem;    /* 96px */
+  
+  /* Borders */
+  --border-radius-sm: 0.25rem;  /* 4px */
+  --border-radius-md: 0.5rem;   /* 8px */
+  --border-radius-lg: 1rem;     /* 16px */
+  --border-radius-xl: 2rem;     /* 32px */
+  --border-radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+  
+  /* Container */
+  --container-padding: 1.5rem;
+  --container-max-width: 1200px;
+  
+  /* Z-index layers */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+}
