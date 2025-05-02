@@ -11,11 +11,11 @@ ananya-portfolio/
 ├── index.html # Main homepage
 ├── style.css # Custom styles
 ├── main.js # Interactive scripts
-├── counter.js # Visitor counter (or similar functionality)
-├── javascript.svg # Logo or icon
-├── css/ # Additional styles (if any)
+├── counter.js # Visitor counter
+├── javascript.svg # Logo/icon
+├── css/ # Additional styles
 ├── js/ # Extra scripts
-├── images/ # Project or profile images
+└── images/ # Project images
 
 
 ## 🎯 Features
