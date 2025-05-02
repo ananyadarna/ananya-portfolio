@@ -8,14 +8,7 @@ A clean, modern, and responsive personal portfolio website built using HTML, CSS
 ## 📁 Project Structure
 
 ananya-portfolio/
-├── index.html # Main homepage
-├── style.css # Custom styles
-├── main.js # Interactive scripts
-├── counter.js # Visitor counter
-├── javascript.svg # Logo/icon
-├── css/ # Additional styles
-├── js/ # Extra scripts
-└── images/ # Project images
+<pre> ``` ananya-portfolio/ ├── index.html # Main homepage ├── style.css # Custom styles ├── main.js # Interactive scripts ├── counter.js # Visitor counter ├── javascript.svg # Logo/icon ├── css/ # Additional styles ├── js/ # Extra scripts └── images/ # Project images ``` </pre>
 
 
 ## 🎯 Features
